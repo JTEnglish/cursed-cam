@@ -1,8 +1,10 @@
-from curses import wrapper
+import curses
 import numpy as np
 import cv2
 
-charset = [' ', '.', '-', '=', '\u25a1', '+', '*', '#', '%', '@', '\u25bc', '\u25A0']
+charset = [' ', '`', '.', ',', '\'', '-', '"', '~', '=', '\u25a1',
+           '+', '*', 'm', '%', 'C', '#', 'D', 'B', '@', '\u25bc',
+           '\u25A0']
 cap = cv2.VideoCapture(0)
 
 def main(stdscr):
@@ -34,4 +36,4 @@ def main(stdscr):
     # stdscr.getkey()
 
 
-wrapper(main)
+curses.wrapper(main)
