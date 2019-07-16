@@ -17,7 +17,7 @@ def main(stdscr):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         resized_image = cv2.resize(gray, (width - 1, height - 1))
 
-        output = np.interp(resized_image, (0, 255), (0, len(charset)))
+        output = np.interp(resized_image, (0, 255), (0, len(charset) - 1))
         y = 0
         for row in output:
             x = 0
